@@ -1,0 +1,15 @@
+{
+    "alert_type": "ElectricCarChargeAlert",
+    "eagle_username": "changeme@changeme.com",
+    "eagle_password": "changeme",
+    "eagle_cloud_id": "changeme",
+    "smtp_server": "email-smtp.us-west-2.amazonaws.com",
+    "smtp_port": 587,
+    "smtp_email_from": "changeme@gmail.com",
+    "smtp_email_to_list": ["changeme@gmail.com"]
+    "aws_ses_access_key_id": "CHANGEME",
+    "aws_ses_secret_access_key": "CHANGEME",
+    "aws_db_region": "CHANGEME, e.g., us-west-2",
+    "aws_db_access_key_id": "CHANGEME",
+    "aws_db_secret_access_key": "CHANGEME"
+}

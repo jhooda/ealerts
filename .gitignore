@@ -1,0 +1,6 @@
+requests
+requests-2.11.1.dist-info
+boto
+boto-2.44.0.dist-info
+ealerts.zip
+*.pyc
