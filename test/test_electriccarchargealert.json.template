@@ -1,5 +1,6 @@
 {
     "alert_type": "ElectricCarChargeAlert",
+    "expected_power_consumption_kwh": 1.5,
     "eagle_username": "changeme@changeme.com",
     "eagle_password": "changeme",
     "eagle_cloud_id": "changeme",

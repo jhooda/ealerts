@@ -77,7 +77,6 @@ class ElectricCarChargeAlert(object):
         # how many time power below the set threshold before sending email
         self.th1 = 2
         # expected power consumption rate, kwh, when car is charged
-        self.pc1 = 1.5
         self.url1 = 'https://rainforestcloud.com:9445/cgi-bin/post_manager'
         self.request_xml1 = \
         '''
@@ -89,6 +88,7 @@ class ElectricCarChargeAlert(object):
 
     def handler(self, event, context):
         alert_type = event['alert_type']
+        expected_power_consumption_kwh = event['expected_power_consumption_kwh']
         eagle_username = event['eagle_username']
         eagle_password = event['eagle_password']
         eagle_cloud_id = event['eagle_cloud_id']
@@ -145,7 +145,7 @@ class ElectricCarChargeAlert(object):
             # demand > 0.1kw. demand > 1.0kW between 11:30pm to 4:00am
             if demand_kwh > 0.1:
                 uts = int(time.time())
-                if demand_kwh < self.pc1:
+                if demand_kwh < expected_power_consumption_kwh:
                     if not db_item.get(ALERTED):
                         c1 = 1
                         if db_item.get(MTIME):
